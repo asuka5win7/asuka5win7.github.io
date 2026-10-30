@@ -30,3 +30,14 @@ h2 { font-size: 17px; margin: 28px 0 6px; color: var(--wood); }
 .card p, .card ul { margin: 6px 0; }
 .mail { font-weight: 700; word-break: break-all; }
 footer { color: var(--soft); font-size: 12px; padding: 20px 0 40px; }
+.lead { font-size: 16px; }
+.facts { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; font-size: 14px; margin: 10px 0 0; }
+.facts dt { color: var(--soft); font-weight: 700; }
+.facts dd { margin: 0; }
+.shots { display: grid; gap: 14px; }
+.shot { margin: 0; }
+.shot img { width: 100%; height: auto; border-radius: 12px; display: block; box-shadow: 0 3px 10px rgba(58, 42, 28, .2); }
+.shot figcaption { font-size: 13px; color: var(--soft); margin-top: 6px; }
+.faq h2 { font-size: 15px; }
+.store { display: inline-block; margin-top: 10px; padding: 10px 18px; border-radius: 999px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 700; font-size: 14px; }
+.store.soon { background: var(--soft); }

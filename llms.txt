@@ -1,0 +1,8 @@
+# asuka5win7.github.io
+
+> 個人開発の iPhone アプリの紹介ページです。
+
+## アプリ
+
+- [やまぐらし](https://asuka5win7.github.io/yamagurashi/)：山小屋でくらしながら畑や鳥の世話をし、山で釣り・虫とり・狩り・山菜採りをして四季をすごす iPhone 向けのスローライフゲーム（無料・アプリ内課金なし）。詳しくは [llms.txt](https://asuka5win7.github.io/yamagurashi/llms.txt)
+- [海外旅ログ](https://asuka5win7.github.io/)：訪問国・都市・トランジット・旅先の写真を 3D 地球儀で記録できる旅行記録アプリ。

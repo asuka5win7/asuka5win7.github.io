@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asuka5win7.github.io/sitemap.xml
