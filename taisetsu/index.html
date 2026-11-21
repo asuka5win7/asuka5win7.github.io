@@ -64,19 +64,6 @@
         <dt>言語</dt><dd>日本語</dd>
       </dl>
       <a class="store" id="dl" href="https://apps.apple.com/jp/app/id6836663352">App Store でダウンロード（無料）</a>
-      <!-- TEST-START：TikTok で App Store が開ける方法を調べるための一時的なボタン（結果が出たら消す） -->
-      <div class="opentest">
-        <p><b>テスト中：</b>A〜F を1つずつ押して、App Store が開いたものを教えてください</p>
-        <a class="t" href="https://apps.apple.com/jp/app/id6836663352">A　ふつうのリンク</a>
-        <a class="t" href="itms-apps://apps.apple.com/jp/app/id6836663352">B　itms-apps://</a>
-        <a class="t" href="itms-appss://apps.apple.com/jp/app/id6836663352">C　itms-appss://</a>
-        <a class="t" href="x-safari-https://apps.apple.com/jp/app/id6836663352">D　x-safari-https://（Safari）</a>
-        <button class="t" type="button" onclick="window.open('https://apps.apple.com/jp/app/id6836663352','_blank')">E　window.open</button>
-        <a class="t" href="https://apps.apple.com/jp/app/id6836663352" target="_blank" rel="noopener">F　target=_blank</a>
-        <p class="ua" id="ua"></p>
-        <script>document.getElementById('ua').textContent = navigator.userAgent</script>
-      </div>
-      <!-- TEST-END -->
       <div class="inapp" id="inapp" hidden>
         <p><strong>TikTok などのアプリの中では、App Store が開けないことがあります。</strong></p>
         <ol>
@@ -84,7 +71,7 @@
           <li>「<b>ブラウザで開く</b>」（Safari で開く）を選ぶ</li>
           <li>開いたページで、もう一度「App Store でダウンロード」をタップ</li>
         </ol>
-        <button type="button" id="copy">このページのリンクをコピー</button>
+        <button type="button" id="copy2">このページのリンクをコピー</button>
         <p class="hint">または App Store で「<b>ひとこと日記</b>」と検索してください。</p>
       </div>
     </div>
@@ -121,34 +108,50 @@
     <footer>© ひとこと日記</footer>
   </div>
   <div class="inapp-arrow" id="arrow" hidden>ここから「ブラウザで開く」<span>↗</span></div>
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet-card">
+      <p class="sheet-title">App Store を開くには</p>
+      <p>TikTok などのアプリの中では、App Store に移動できません。Safari で開きなおしてください。</p>
+      <ol>
+        <li>画面の右上の「<b>…</b>」（または「<b>↗</b>」）をタップ</li>
+        <li>「<b>ブラウザで開く</b>」を選ぶ</li>
+        <li>Safari で開いたら、もう一度「App Store でダウンロード」をタップ</li>
+      </ol>
+      <button type="button" class="sheet-copy" id="copy">このページのリンクをコピー</button>
+      <p class="hint">または App Store で「<b>ひとこと日記</b>」と検索してください。</p>
+      <button type="button" class="sheet-close" id="close">とじる</button>
+    </div>
+  </div>
   <script>
-    // TikTok・Instagram・LINE などのアプリ内ブラウザでは App Store のリンクが開けないことがあるので、案内を出す
+    // TikTok・Instagram・Facebook のアプリ内ブラウザからは App Store に移れない（2026-11 にどの開き方も止められると確認）。
+    // そのため、アプリ内ブラウザではボタンを押したら「ブラウザで開く」の案内を出す。LINE は Safari で開き直せる
     (function () {
-      var STORE = 'https://apps.apple.com/jp/app/id6836663352';
       var ua = navigator.userAgent;
-      var inApp = /musical_ly|Bytedance|TikTok|Instagram|FBAN|FBAV|Line\//i.test(ua) || /[?&]inapp=1/.test(location.search);
-      // LINE はこの付け足しで Safari で開き直せる
       if (/Line\//.test(ua) && !/openExternalBrowser=1/.test(location.search)) {
         location.replace(location.pathname + (location.search ? location.search + '&' : '?') + 'openExternalBrowser=1');
         return;
       }
+      var inApp = /musical_ly|Bytedance|TikTok|Instagram|FBAN|FBAV/i.test(ua) || /[?&]inapp=1/.test(location.search);
       if (!inApp) return;
-      var box = document.getElementById('inapp');
-      var arrow = document.getElementById('arrow');
-      box.hidden = false;
-      arrow.hidden = false;
-      if (false) document.getElementById('dl').addEventListener('click', function (e) {
-        // iOS 17 以降：Safari で App Store のページを開く（だめなときは上の案内で）
+      var sheet = document.getElementById('sheet');
+      document.getElementById('inapp').hidden = false;
+      document.getElementById('arrow').hidden = false;
+      document.getElementById('dl').textContent = 'ダウンロードのしかた';
+      document.getElementById('dl').addEventListener('click', function (e) {
         e.preventDefault();
-        location.href = 'x-safari-' + STORE;
-        setTimeout(function () { box.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 1200);
+        sheet.hidden = false;
       });
-      document.getElementById('copy').addEventListener('click', function () {
+      document.getElementById('close').onclick = function () { sheet.hidden = true; };
+      sheet.addEventListener('click', function (e) { if (e.target === sheet) sheet.hidden = true; });
+      var copy = function (btn) {
         var url = location.origin + location.pathname;
-        var done = function () { document.getElementById('copy').textContent = 'コピーしました。Safari に貼りつけてね'; };
+        var done = function () { btn.textContent = 'コピーしました。Safari に貼りつけて開いてね'; };
         if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('このリンクをコピーしてください', url); });
         else prompt('このリンクをコピーしてください', url);
-      });
+      };
+      document.getElementById('copy').onclick = function () { copy(this); };
+      var c2 = document.getElementById('copy2');
+      if (c2) c2.onclick = function () { copy(this); };
     })();
   </script>
 </body>

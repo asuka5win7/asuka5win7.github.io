@@ -47,6 +47,10 @@ footer { color: var(--soft); font-size: 12px; padding: 20px 0 40px; }
 .inapp .hint { color: var(--soft); font-size: 12px; margin-top: 8px; }
 .inapp-arrow { position: fixed; top: 8px; right: 10px; z-index: 10; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 12px; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
 .inapp-arrow span { margin-left: 4px; }
-.opentest { margin-top: 14px; padding: 12px; border: 2px dashed #c0392b; border-radius: 12px; font-size: 13px; }
-.opentest .t { display: block; margin: 8px 0; padding: 12px 14px; border: 0; border-radius: 12px; background: var(--ink); color: #fff; font-size: 15px; font-weight: 700; text-decoration: none; text-align: left; width: 100%; }
-.opentest .ua { font-size: 10px; color: var(--soft); word-break: break-all; }
+.sheet { position: fixed; inset: 0; z-index: 20; display: flex; align-items: flex-end; background: rgba(0,0,0,.35); }
+.sheet[hidden] { display: none; }
+.sheet-card { width: 100%; padding: 22px 20px calc(18px + env(safe-area-inset-bottom)); border-radius: 22px 22px 0 0; background: var(--card); font-size: 14px; }
+.sheet-title { font-size: 18px; font-weight: 800; margin: 0 0 6px; }
+.sheet-card ol { margin: 8px 0 14px; padding-left: 1.3em; }
+.sheet-copy { width: 100%; padding: 12px; border: 0; border-radius: 999px; background: var(--leaf); color: #fff; font-weight: 700; font-size: 15px; }
+.sheet-close { width: 100%; margin-top: 6px; padding: 10px; border: 0; background: none; color: var(--soft); font-size: 14px; }
