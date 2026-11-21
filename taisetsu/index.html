@@ -63,7 +63,17 @@
         <dt>データ</dt><dd>記録や日記は iPhone の中だけに保存</dd>
         <dt>言語</dt><dd>日本語</dd>
       </dl>
-      <a class="store" href="https://apps.apple.com/jp/app/id6836663352">App Store でダウンロード（無料）</a>
+      <a class="store" id="dl" href="https://apps.apple.com/jp/app/id6836663352">App Store でダウンロード（無料）</a>
+      <div class="inapp" id="inapp" hidden>
+        <p><strong>TikTok などのアプリの中では、App Store が開けないことがあります。</strong></p>
+        <ol>
+          <li>画面の右上の「<b>…</b>」（または「<b>↗</b>」）をタップ</li>
+          <li>「<b>ブラウザで開く</b>」（Safari で開く）を選ぶ</li>
+          <li>開いたページで、もう一度「App Store でダウンロード」をタップ</li>
+        </ol>
+        <button type="button" id="copy">このページのリンクをコピー</button>
+        <p class="hint">または App Store で「<b>ひとこと日記</b>」と検索してください。</p>
+      </div>
     </div>
 
     <div class="card faq" id="faq">
@@ -97,5 +107,36 @@
 
     <footer>© ひとこと日記</footer>
   </div>
+  <div class="inapp-arrow" id="arrow" hidden>ここから「ブラウザで開く」<span>↗</span></div>
+  <script>
+    // TikTok・Instagram・LINE などのアプリ内ブラウザでは App Store のリンクが開けないことがあるので、案内を出す
+    (function () {
+      var STORE = 'https://apps.apple.com/jp/app/id6836663352';
+      var ua = navigator.userAgent;
+      var inApp = /musical_ly|Bytedance|TikTok|Instagram|FBAN|FBAV|Line\//i.test(ua) || /[?&]inapp=1/.test(location.search);
+      // LINE はこの付け足しで Safari で開き直せる
+      if (/Line\//.test(ua) && !/openExternalBrowser=1/.test(location.search)) {
+        location.replace(location.pathname + (location.search ? location.search + '&' : '?') + 'openExternalBrowser=1');
+        return;
+      }
+      if (!inApp) return;
+      var box = document.getElementById('inapp');
+      var arrow = document.getElementById('arrow');
+      box.hidden = false;
+      arrow.hidden = false;
+      document.getElementById('dl').addEventListener('click', function (e) {
+        // iOS 17 以降：Safari で App Store のページを開く（だめなときは上の案内で）
+        e.preventDefault();
+        location.href = 'x-safari-' + STORE;
+        setTimeout(function () { box.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 1200);
+      });
+      document.getElementById('copy').addEventListener('click', function () {
+        var url = location.origin + location.pathname;
+        var done = function () { document.getElementById('copy').textContent = 'コピーしました。Safari に貼りつけてね'; };
+        if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('このリンクをコピーしてください', url); });
+        else prompt('このリンクをコピーしてください', url);
+      });
+    })();
+  </script>
 </body>
 </html>

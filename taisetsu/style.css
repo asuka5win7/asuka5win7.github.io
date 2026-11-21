@@ -41,3 +41,9 @@ footer { color: var(--soft); font-size: 12px; padding: 20px 0 40px; }
 .faq h2 { font-size: 15px; }
 .store { display: inline-block; margin-top: 10px; padding: 10px 18px; border-radius: 999px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 700; font-size: 14px; }
 .store.soon { background: var(--soft); }
+.inapp { margin-top: 14px; padding: 14px 16px; border-radius: 12px; background: #fff3d6; border: 1px solid #ecd49a; font-size: 14px; }
+.inapp ol { margin: 6px 0 10px; padding-left: 1.3em; }
+.inapp button { width: 100%; padding: 11px; border: 0; border-radius: 999px; background: var(--leaf); color: #fff; font-weight: 700; font-size: 14px; }
+.inapp .hint { color: var(--soft); font-size: 12px; margin-top: 8px; }
+.inapp-arrow { position: fixed; top: 8px; right: 10px; z-index: 10; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 12px; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.inapp-arrow span { margin-left: 4px; }
