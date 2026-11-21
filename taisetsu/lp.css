@@ -113,3 +113,9 @@ footer .mail { font-weight: 700; word-break: break-all; }
   .mascot { width: 180px; }
 }
 .inapp .hero { padding-top: calc(58px + env(safe-area-inset-top)); }
+.cta-sub {
+  display: block; width: min(100%, 340px); margin: 10px auto 0; padding: 13px 20px;
+  border: 2px solid var(--green); border-radius: 999px; background: #fff; color: var(--green-dark);
+  font: inherit; font-size: 15px; font-weight: 800; cursor: pointer;
+}
+.cta-sub:active { transform: translateY(1px); }
