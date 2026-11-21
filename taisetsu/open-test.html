@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>App Store の開き方テスト</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .t { display: block; width: 100%; margin: 10px 0; padding: 14px; border: 0; border-radius: 14px; background: var(--ink); color: #fff; font-size: 16px; font-weight: 700; text-align: left; text-decoration: none; }
+    .t small { display: block; font-weight: 400; opacity: .7; font-size: 12px; margin-top: 2px; }
+    code { font-size: 11px; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>App Store の開き方テスト</h1>
+      <p>TikTok の中でこのページを開いて、A〜E を<b>1つずつ</b>押してください。App Store（ひとこと日記のページ）が開いたものの記号を教えてください。</p>
+      <p><small>いまのブラウザ：</small><br><code id="ua"></code></p>
+
+      <a class="t" href="https://apps.apple.com/jp/app/id6836663352">A　ふつうのリンク<small>https://apps.apple.com/…</small></a>
+      <a class="t" href="itms-apps://apps.apple.com/jp/app/id6836663352">B　App Store アプリを直接<small>itms-apps://</small></a>
+      <a class="t" href="itms-appss://apps.apple.com/jp/app/id6836663352">C　App Store アプリを直接（別の書き方）<small>itms-appss://</small></a>
+      <a class="t" href="x-safari-https://apps.apple.com/jp/app/id6836663352">D　Safari で開く<small>x-safari-https://（iOS 17 以降）</small></a>
+      <button class="t" type="button" id="e">E　新しいウインドウで開く<small>window.open</small></button>
+      <a class="t" href="https://apps.apple.com/jp/app/id6836663352" target="_blank" rel="noopener">F　新しいタブのリンク<small>target=_blank</small></a>
+    </div>
+  </div>
+  <script>
+    document.getElementById('ua').textContent = navigator.userAgent;
+    document.getElementById('e').onclick = function () { window.open('https://apps.apple.com/jp/app/id6836663352', '_blank'); };
+  </script>
+</body>
+</html>
