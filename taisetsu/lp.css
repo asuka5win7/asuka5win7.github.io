@@ -114,8 +114,10 @@ footer .mail { font-weight: 700; word-break: break-all; }
 }
 .inapp .hero { padding-top: calc(58px + env(safe-area-inset-top)); }
 .cta-sub {
-  display: block; width: min(100%, 340px); margin: 10px auto 0; padding: 13px 20px;
-  border: 2px solid var(--green); border-radius: 999px; background: #fff; color: var(--green-dark);
-  font: inherit; font-size: 15px; font-weight: 800; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  width: min(100%, 340px); margin: 12px auto 0; padding: 16px 20px;
+  border: 0; border-radius: 999px; background: var(--green); color: #fff;
+  font: inherit; font-size: 17px; font-weight: 800; cursor: pointer;
+  box-shadow: 0 4px 0 var(--green-dark), 0 10px 24px rgba(55, 122, 71, .25);
 }
-.cta-sub:active { transform: translateY(1px); }
+.cta-sub:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--green-dark); }
