@@ -2,25 +2,33 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>ひとこと日記 - 習慣化とセルフケア｜どうぶつと暮らす気分記録（iPhone）</title>
-  <meta name="description" content="ひとこと日記は、小さなどうぶつと3Dのお部屋で暮らしながら、毎日の気分を記録し、自分で決めたチャレンジを続けるiPhone向けのセルフケアアプリです。記録は端末の中だけに保存されます。">
+  <meta name="description" content="ひとこと日記は、小さなどうぶつと3Dのお部屋で暮らしながら、毎日の気分をひとことで記録し、自分で決めたチャレンジを続けるiPhone向けのセルフケアアプリです。無料・登録なし。記録は端末の中だけに保存されます。">
   <link rel="canonical" href="https://asuka5win7.github.io/taisetsu/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="ひとこと日記 - 習慣化とセルフケア｜どうぶつと暮らす気分記録">
-  <meta property="og:description" content="どうぶつと暮らすお部屋で、気分を記録して、小さなチャレンジを続ける。日記は端末の中だけ。">
-  <meta property="og:image" content="https://asuka5win7.github.io/taisetsu/icon.png">
+  <meta property="og:title" content="ひとこと日記 - どうぶつと暮らす、ひとこと気分日記">
+  <meta property="og:description" content="気分をえらぶだけ。続けるほど、お部屋がにぎやかに。無料・登録なし・日記はiPhoneの中だけ。">
+  <meta property="og:image" content="https://asuka5win7.github.io/taisetsu/img/room.webp">
   <meta property="og:url" content="https://asuka5win7.github.io/taisetsu/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f7f1e4">
   <meta name="apple-itunes-app" content="app-id=6836663352">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lp.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "ひとこと日記",
-    "description": "小さなどうぶつと3Dのお部屋で暮らしながら、毎日の気分を記録し、自分で決めたチャレンジを続けるiPhone向けのセルフケアアプリ。",
+    "alternateName": ["ひとこと日記 - 習慣化とセルフケア", "大切なこと。"],
+    "description": "小さなどうぶつと3Dのお部屋で暮らしながら、毎日の気分をひとことで記録し、自分で決めたチャレンジを続けるiPhone向けのセルフケアアプリ。",
     "url": "https://asuka5win7.github.io/taisetsu/",
     "image": "https://asuka5win7.github.io/taisetsu/icon.png",
+    "screenshot": [
+      "https://asuka5win7.github.io/taisetsu/img/room.webp",
+      "https://asuka5win7.github.io/taisetsu/img/record.webp",
+      "https://asuka5win7.github.io/taisetsu/img/challenge.webp"
+    ],
     "operatingSystem": "iOS 15.0 以上",
     "applicationCategory": "HealthApplication",
     "inLanguage": "ja",
@@ -31,91 +39,121 @@
   </script>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img src="icon.png" alt="ひとこと日記のアイコン">
+  <!-- ファーストビュー：何のアプリか・ダウンロード -->
+  <header class="hero">
+    <div class="brand">
+      <img src="icon.png" alt="" width="44" height="44">
+      <span>ひとこと日記</span>
+    </div>
+    <h1>どうぶつと暮らす、<br>ひとこと気分日記</h1>
+    <p class="lead">今日の気分をえらぶだけ。<br>続けるほど、お部屋がにぎやかに。</p>
+    <a class="cta dl" href="https://apps.apple.com/jp/app/id6836663352">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.2 2.5-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.9-4.2zM13.9 5.2c.7-.8 1.2-2 1-3.2-1 0-2.2.7-3 1.5-.6.7-1.2 1.9-1 3.1 1.1.1 2.3-.6 3-1.4z"/></svg>
+      <span class="dl-label">App Store で無料ダウンロード</span>
+    </a>
+    <ul class="chips">
+      <li>無料</li>
+      <li>登録なし</li>
+      <li>日記は iPhone の中だけ</li>
+    </ul>
+    <img class="mascot" src="img/mascot.webp" alt="ひとこと日記のカワウソ" width="325" height="520">
+  </header>
+
+  <!-- 画面：横にスワイプ -->
+  <section class="shots" aria-label="アプリの画面">
+    <div class="track">
+      <img src="img/room.webp" alt="どうぶつと暮らす小さなお部屋" width="600" height="1304" loading="lazy">
+      <img src="img/record.webp" alt="今日の気分をひとことで記録" width="600" height="1304" loading="lazy">
+      <img src="img/challenge.webp" alt="続けたいことを自分で決めるチャレンジ" width="600" height="1304" loading="lazy">
+      <img src="img/report.webp" alt="気分がよかった日の共通点がわかるふりかえり" width="600" height="1304" loading="lazy">
+      <img src="img/letter.webp" alt="毎週どうぶつから届くおたより" width="600" height="1304" loading="lazy">
+      <img src="img/wardrobe.webp" alt="コインで着せ替え・模様替え" width="600" height="1304" loading="lazy">
+      <img src="img/calendar.webp" alt="気分のカレンダーでふりかえり" width="600" height="1304" loading="lazy">
+    </div>
+    <p class="swipe">← スワイプして見る →</p>
+  </section>
+
+  <!-- できること：3つだけ -->
+  <section class="points">
+    <div class="point">
+      <span class="num">1</span>
       <div>
-        <div class="name">ひとこと日記</div>
-        <div class="tag">どうぶつと暮らす、気分の日記</div>
-      </div>
-    </header>
-    <nav>
-      <a href="./" aria-current="page">ひとこと日記とは</a>
-      <a href="#faq">よくある質問</a>
-      <a href="#support">お問い合わせ</a>
-      <a href="privacy.html">プライバシーポリシー</a>
-    </nav>
-
-    <div class="card">
-      <h1>ひとこと日記とは</h1>
-      <p class="lead"><strong>ひとこと日記</strong>は、小さなどうぶつと 3D のお部屋で暮らしながら、毎日の気分をひとことで記録し、自分で決めた小さなチャレンジを続けていく iPhone 向けのセルフケアアプリです。</p>
-      <ul>
-        <li>気分を5段階で記録して、できごとのタグや日記を残せます</li>
-        <li>「毎日10分歩く」など、日数も自分で決められるチャレンジ</li>
-        <li>記録とチャレンジでコインがたまり、家具や服を集めてお部屋と着せ替えを楽しめます</li>
-        <li>週ごとのおたよりと、週・月・年のふりかえり</li>
-        <li>カワウソ・しば犬・ねこ・たぬき・くま・うさぎから、いっしょに暮らすどうぶつを選べます</li>
-      </ul>
-      <dl class="facts">
-        <dt>料金</dt><dd>無料</dd>
-        <dt>広告</dt><dd>自分で選んで見る動画広告のみ（コインがもらえる）</dd>
-        <dt>対応端末</dt><dd>iPhone（iOS 15以上）</dd>
-        <dt>データ</dt><dd>記録や日記は iPhone の中だけに保存</dd>
-        <dt>言語</dt><dd>日本語</dd>
-      </dl>
-      <a class="store" id="dl" href="https://apps.apple.com/jp/app/id6836663352">App Store でダウンロード（無料）</a>
-      <div class="inapp" id="inapp" hidden>
-        <p><strong>TikTok などのアプリの中では、App Store が開けないことがあります。</strong></p>
-        <ol>
-          <li>画面の右上の「<b>…</b>」（または「<b>↗</b>」）をタップ</li>
-          <li>「<b>ブラウザで開く</b>」（Safari で開く）を選ぶ</li>
-          <li>開いたページで、もう一度「App Store でダウンロード」をタップ</li>
-        </ol>
-        <button type="button" id="copy2">このページのリンクをコピー</button>
-        <p class="hint">または App Store で「<b>ひとこと日記</b>」と検索してください。</p>
+        <h2>気分をタップするだけ</h2>
+        <p>5つの顔からえらぶだけ。書きたい日は、ひとこと日記も。</p>
       </div>
     </div>
+    <div class="point">
+      <span class="num">2</span>
+      <div>
+        <h2>小さなチャレンジを続ける</h2>
+        <p>「毎日10分歩く」など、日数も自分で決めて、できた日にスタンプ。</p>
+      </div>
+    </div>
+    <div class="point">
+      <span class="num">3</span>
+      <div>
+        <h2>コインでお部屋と着せ替え</h2>
+        <p>記録するとコインがたまる。家具や服を集めて、自分だけのお部屋に。</p>
+      </div>
+    </div>
+  </section>
 
-    <div class="card faq" id="faq">
-      <h1>よくある質問</h1>
+  <!-- もう一度ダウンロード -->
+  <section class="end">
+    <p class="end-copy">1日1分、<br>自分の気持ちに目を向ける。</p>
+    <a class="cta dl" href="https://apps.apple.com/jp/app/id6836663352">
+      <span class="dl-label">App Store で無料ダウンロード</span>
+    </a>
+    <p class="note">iPhone（iOS 15 以上）・日本語</p>
+  </section>
 
-      <h2>無料で使えますか？</h2>
+  <!-- よくある質問（たたんでおく） -->
+  <section class="faq" id="faq">
+    <h2>よくある質問</h2>
+    <details>
+      <summary>無料ですか？</summary>
       <p>はい。すべての機能を無料で使えます。</p>
-
-      <h2>広告は出ますか？</h2>
-      <p>勝手に流れる広告はありません。アプリの中で使えるコインがほしいときに、自分で選んで見る動画広告だけです（1日3回まで）。コインは本物のお金ではなく、換金したりアプリの外で使ったりすることはできません。</p>
-
-      <h2>日記の中身はどこかに送られますか？</h2>
-      <p>送られません。気分の記録・日記・チャレンジは、お使いの iPhone の中だけに保存されます。運営者が受け取ったり見たりすることはありません。広告にも使われません。</p>
-
-      <h2>機種変更したら記録は引きつげますか？</h2>
+    </details>
+    <details>
+      <summary>広告は出ますか？</summary>
+      <p>勝手に流れる広告はありません。アプリの中で使えるコインがほしいときに、自分で選んで見る動画広告だけです（1日3回まで）。</p>
+    </details>
+    <details>
+      <summary>日記の中身はどこかに送られますか？</summary>
+      <p>送られません。気分の記録・日記・チャレンジは、お使いの iPhone の中だけに保存されます。運営者が見ることはなく、広告にも使われません。</p>
+    </details>
+    <details>
+      <summary>機種変更したら記録は引きつげますか？</summary>
       <p>iPhone のバックアップ（iCloud バックアップまたはパソコン）から新しい iPhone を復元すると引きつがれます。アプリを消すと、iPhone の中の記録も消えます。</p>
+    </details>
+    <details>
+      <summary>通知はとめられますか？</summary>
+      <p>アプリの「マイページ」で、通知の種類ごとにオン・オフや時刻を変えられます。</p>
+    </details>
+    <details>
+      <summary>医療や診断のためのアプリですか？</summary>
+      <p>いいえ。日々の気分をふりかえるための記録アプリです。つらい気持ちが続くときは、医療機関や専門の相談窓口にご相談ください。</p>
+    </details>
+  </section>
 
-      <h2>通知はとめられますか？</h2>
-      <p>アプリの「マイページ」で、通知の種類ごとにオン・オフや時刻を変えられます。iPhone の「設定」→「通知」からもとめられます。</p>
+  <footer id="support">
+    <p>お問い合わせ</p>
+    <p class="mail"><a href="mailto:asukabb.0407@gmail.com?subject=%E3%81%B2%E3%81%A8%E3%81%93%E3%81%A8%E6%97%A5%E8%A8%98%20%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">asukabb.0407@gmail.com</a></p>
+    <p class="small">不具合のときは、iPhone の機種と iOS のバージョン、どんな操作をしたときに起きたかを書いていただけると助かります。</p>
+    <p><a href="privacy.html">プライバシーポリシー</a></p>
+    <p class="small">© ひとこと日記</p>
+  </footer>
 
-      <h2>医療や診断のためのアプリですか？</h2>
-      <p>いいえ。日々の気分をふりかえるための記録アプリで、医療・診断・治療を目的としたものではありません。つらい気持ちが続くときは、医療機関や専門の相談窓口にご相談ください。</p>
-    </div>
-
-    <div class="card" id="support">
-      <h1>お問い合わせ</h1>
-      <p>不具合やご意見は、こちらのメールアドレスまでお送りください。</p>
-      <p class="mail"><a href="mailto:asukabb.0407@gmail.com?subject=%E3%81%B2%E3%81%A8%E3%81%93%E3%81%A8%E6%97%A5%E8%A8%98%20%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">asukabb.0407@gmail.com</a></p>
-      <p>不具合のときは、お使いの iPhone の機種と iOS のバージョン、どんな操作をしたときに起きたかを書いていただけると助かります。</p>
-    </div>
-
-    <footer>© ひとこと日記</footer>
-  </div>
-  <div class="inapp-arrow" id="arrow" hidden>ここから「ブラウザで開く」<span>↗</span></div>
+  <!-- TikTok などアプリの中のブラウザ用 -->
+  <div class="inapp-arrow" id="arrow" hidden>「...」から「ブラウザで開く」<span>↗</span></div>
   <div class="sheet" id="sheet" hidden>
     <div class="sheet-card">
       <p class="sheet-title">App Store を開くには</p>
       <p>TikTok などのアプリの中では、App Store に移動できません。Safari で開きなおしてください。</p>
       <ol>
-        <li>画面の右上の「<b>…</b>」（または「<b>↗</b>」）をタップ</li>
+        <li>画面の右上の「<b>...</b>」（または「<b>↗</b>」）をタップ</li>
         <li>「<b>ブラウザで開く</b>」を選ぶ</li>
-        <li>Safari で開いたら、もう一度「App Store でダウンロード」をタップ</li>
+        <li>Safari で開いたら、もう一度「App Store で無料ダウンロード」をタップ</li>
       </ol>
       <button type="button" class="sheet-copy" id="copy">このページのリンクをコピー</button>
       <p class="hint">または App Store で「<b>ひとこと日記</b>」と検索してください。</p>
@@ -134,24 +172,24 @@
       var inApp = /musical_ly|Bytedance|TikTok|Instagram|FBAN|FBAV/i.test(ua) || /[?&]inapp=1/.test(location.search);
       if (!inApp) return;
       var sheet = document.getElementById('sheet');
-      document.getElementById('inapp').hidden = false;
       document.getElementById('arrow').hidden = false;
-      document.getElementById('dl').textContent = 'ダウンロードのしかた';
-      document.getElementById('dl').addEventListener('click', function (e) {
-        e.preventDefault();
-        sheet.hidden = false;
+      document.body.classList.add('inapp');
+      Array.prototype.forEach.call(document.querySelectorAll('.dl'), function (a) {
+        a.querySelector('.dl-label').textContent = 'ダウンロードのしかた';
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          sheet.hidden = false;
+        });
       });
       document.getElementById('close').onclick = function () { sheet.hidden = true; };
       sheet.addEventListener('click', function (e) { if (e.target === sheet) sheet.hidden = true; });
-      var copy = function (btn) {
+      document.getElementById('copy').onclick = function () {
+        var btn = this;
         var url = location.origin + location.pathname;
         var done = function () { btn.textContent = 'コピーしました。Safari に貼りつけて開いてね'; };
         if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('このリンクをコピーしてください', url); });
         else prompt('このリンクをコピーしてください', url);
       };
-      document.getElementById('copy').onclick = function () { copy(this); };
-      var c2 = document.getElementById('copy2');
-      if (c2) c2.onclick = function () { copy(this); };
     })();
   </script>
 </body>

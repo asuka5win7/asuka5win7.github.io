@@ -1,0 +1,115 @@
+/* ひとこと日記 LP（スマホで見る前提。TikTok からの人が多い） */
+:root {
+  --ink: #3a2a1c;
+  --soft: #7a6652;
+  --paper: #f7f1e4;
+  --card: #fffaf0;
+  --line: #e4d8c2;
+  --green: #4f9a5f;
+  --green-dark: #377a47;
+  --leaf: #3f6b4f;
+  --sage: #e7f0dc;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Maru Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.7;
+}
+a { color: var(--leaf); }
+img { display: block; max-width: 100%; height: auto; }
+
+/* ファーストビュー */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: calc(18px + env(safe-area-inset-top)) 20px 0;
+  text-align: center;
+  background: radial-gradient(120% 70% at 50% 100%, #dfead2 0%, var(--paper) 62%);
+}
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 17px; }
+.brand img { width: 44px; height: 44px; border-radius: 11px; box-shadow: 0 2px 6px rgba(58, 42, 28, .18); }
+.hero h1 { margin: 22px 0 8px; font-size: clamp(27px, 8vw, 40px); line-height: 1.3; letter-spacing: .02em; }
+.lead { margin: 0 auto; max-width: 30em; color: var(--soft); font-size: 15px; }
+.cta {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: min(100%, 340px); margin: 22px auto 0; padding: 16px 20px;
+  border-radius: 999px; background: var(--green); color: #fff; text-decoration: none;
+  font-size: 17px; font-weight: 800;
+  box-shadow: 0 4px 0 var(--green-dark), 0 10px 24px rgba(55, 122, 71, .25);
+}
+.cta:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--green-dark); }
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 14px 0 0; padding: 0; list-style: none; }
+.chips li { padding: 4px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--line); font-size: 12px; font-weight: 700; color: var(--soft); }
+.mascot { width: 118px; margin: 16px auto -6px; filter: drop-shadow(0 10px 10px rgba(58, 42, 28, .18)); }
+
+/* 画面（横スワイプ） */
+.shots { padding: 26px 0 8px; background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.track {
+  display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding: 0 20px 6px; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.track::-webkit-scrollbar { display: none; }
+.track img {
+  flex: 0 0 auto; width: min(62vw, 260px); scroll-snap-align: center;
+  border-radius: 18px; box-shadow: 0 6px 18px rgba(58, 42, 28, .14);
+}
+.swipe { margin: 8px 0 0; text-align: center; font-size: 12px; color: var(--soft); }
+
+/* できること */
+.points { max-width: 520px; margin: 0 auto; padding: 28px 20px 6px; }
+.point { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px dashed var(--line); }
+.point:last-child { border-bottom: 0; }
+.num {
+  flex: 0 0 auto; display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%; background: var(--sage); color: var(--leaf); font-weight: 800;
+}
+.point h2 { margin: 2px 0 2px; font-size: 17px; }
+.point p { margin: 0; color: var(--soft); font-size: 14px; }
+
+/* もう一度ダウンロード */
+.end { padding: 26px 20px 34px; text-align: center; }
+.end-copy { margin: 0; font-size: 20px; font-weight: 800; line-height: 1.5; }
+.note { margin: 10px 0 0; font-size: 12px; color: var(--soft); }
+
+/* よくある質問 */
+.faq { max-width: 520px; margin: 0 auto; padding: 0 20px 10px; }
+.faq h2 { font-size: 16px; margin: 0 0 8px; color: var(--soft); }
+.faq details { background: var(--card); border: 1px solid var(--line); border-radius: 14px; margin-bottom: 8px; }
+.faq summary { padding: 12px 16px; font-weight: 700; font-size: 14px; cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "＋"; float: right; color: var(--soft); }
+.faq details[open] summary::after { content: "－"; }
+.faq details p { margin: 0; padding: 0 16px 14px; font-size: 13px; color: var(--soft); }
+
+footer { max-width: 520px; margin: 0 auto; padding: 18px 20px calc(30px + env(safe-area-inset-bottom)); font-size: 13px; text-align: center; color: var(--soft); }
+footer p { margin: 4px 0; }
+footer .small { font-size: 11px; }
+footer .mail { font-weight: 700; word-break: break-all; }
+
+/* TikTok などアプリの中のブラウザ用 */
+.inapp-arrow {
+  position: fixed; top: calc(8px + env(safe-area-inset-top)); right: 10px; z-index: 10;
+  padding: 6px 12px; border-radius: 999px; background: var(--ink); color: #fff;
+  font-size: 12px; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+.inapp-arrow span { margin-left: 4px; }
+.sheet { position: fixed; inset: 0; z-index: 20; display: flex; align-items: flex-end; background: rgba(0, 0, 0, .35); }
+.sheet[hidden], .inapp-arrow[hidden] { display: none; }
+.sheet-card { width: 100%; padding: 22px 20px calc(18px + env(safe-area-inset-bottom)); border-radius: 22px 22px 0 0; background: var(--card); font-size: 14px; }
+.sheet-title { font-size: 18px; font-weight: 800; margin: 0 0 6px; }
+.sheet-card ol { margin: 8px 0 14px; padding-left: 1.3em; }
+.sheet-copy { width: 100%; padding: 12px; border: 0; border-radius: 999px; background: var(--leaf); color: #fff; font-weight: 700; font-size: 15px; }
+.sheet-close { width: 100%; margin-top: 6px; padding: 10px; border: 0; background: none; color: var(--soft); font-size: 14px; }
+.hint { color: var(--soft); font-size: 12px; margin-top: 8px; }
+
+/* パソコンで見たとき */
+@media (min-width: 760px) {
+  .track { justify-content: flex-start; padding: 0 max(20px, calc((100vw - 1100px) / 2)) 6px; }
+  .track img { width: 230px; }
+  .mascot { width: 180px; }
+}
+.inapp .hero { padding-top: calc(58px + env(safe-area-inset-top)); }
