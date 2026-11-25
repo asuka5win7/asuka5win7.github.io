@@ -6,4 +6,5 @@
 
 - [やまぐらし](https://asuka5win7.github.io/yamagurashi/)：山小屋でくらしながら畑や鳥の世話をし、山で釣り・虫とり・狩り・山菜採りをして四季をすごす iPhone 向けのスローライフゲーム（日本語・英語／無料・アプリ内課金なし。英語ページ：https://asuka5win7.github.io/yamagurashi/en/）。詳しくは [llms.txt](https://asuka5win7.github.io/yamagurashi/llms.txt)
 - [ひとこと日記](https://asuka5win7.github.io/taisetsu/)：小さなどうぶつと 3D のお部屋で暮らしながら、毎日の気分を記録し、自分で決めたチャレンジを続ける iPhone 向けのセルフケアアプリ（無料・記録は端末の中だけ）。
+- [ふたりの罰金貯金箱](https://asuka5win7.github.io/bakkinn/)：カップルや夫婦が決めたルールの「罰金」を記録し、2人の累計と差をひと目で確認できる iPhone・iPad 向けのルール記録アプリ（無料・広告あり・送金機能なし・招待コードで2台同期）。
 - [海外旅ログ](https://asuka5win7.github.io/)：訪問国・都市・トランジット・旅先の写真を 3D 地球儀で記録できる旅行記録アプリ。
