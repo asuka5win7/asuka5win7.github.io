@@ -1,6 +1,6 @@
 # やまぐらし
 
-> やまぐらしは、山小屋でくらしながら畑や鳥の世話をし、山で釣り・虫とり・狩り・山菜採りをして四季をすごす、iPhone向けのスローライフゲームです（日本語・英語／無料・アプリ内課金なし）。英語名は YamaGurashi。
+> やまぐらしは、山小屋でくらしながら畑や鳥の世話をし、山で釣り・虫とり・狩り・山菜採りをして四季をすごす、iPhone向けのスローライフゲームです（日本語・英語／無料。ゲーム内のぜにを買える「ぜに袋」のアプリ内課金はあるが、買わなくても最後まで遊べる）。英語名は YamaGurashi。
 
 - ジャンル：スローライフ・シミュレーション（ひとり用）
 - 対応：iPhone（iOS 17以上）、横画面
@@ -20,4 +20,4 @@
 
 ## In English
 
-YamaGurashi is a cozy slow-life game for iPhone (English and Japanese, free, no in-app purchases). Live in a mountain cabin in rural Japan, tend your field and chickens, and go stream fishing, bug catching (14 kinds), foraging and hunting as the four seasons change (10 in-game days each). A Field Guide of 90 finds includes legendary creatures. Ads are optional rewarded ads only (up to 3 per day). Playable offline; saves are kept on the iPhone and in the player's own iCloud.
+YamaGurashi is a cozy slow-life game for iPhone (English and Japanese, free; optional Zeni pouch in-app purchases for in-game currency, never required). Live in a mountain cabin in rural Japan, tend your field and chickens, and go stream fishing, bug catching (14 kinds), foraging and hunting as the four seasons change (10 in-game days each). A Field Guide of 90 finds includes legendary creatures. Ads are optional rewarded ads only (up to 3 per day). Playable offline; saves are kept on the iPhone and in the player's own iCloud.
